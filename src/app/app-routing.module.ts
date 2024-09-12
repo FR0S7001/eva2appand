@@ -8,8 +8,40 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'materias',
+    loadChildren: () => import('./materias/materias.module').then( m => m.MateriasPageModule)
+  },
+  {
+    path: 'foro',
+    loadChildren: () => import('./foro/foro.module').then( m => m.ForoPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
+  {
+    path: 'loginscreen',
+    loadChildren: () => import('./pages/loginscreen/loginscreen.module').then( m => m.LoginscreenPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'restarpass',
+    loadChildren: () => import('./pages/restarpass/restarpass.module').then( m => m.RestarpassPageModule)
   },
 ];
 

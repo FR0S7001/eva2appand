@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaulthref="login" text></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="signupForm" (ngSubmit)="registro()">
+    <ion-card>
+      <ion-img src="assets/img/header2.png"></ion-img>
+      <ion-card-header> 
+        <ion-card-title>
+          Sign Up
+        </ion-card-title>
+        <ion-card-subtitle>Crea una cuenta rellenando este formulario</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <!-- Nombre de usuario -->
+        <ion-item>
+          <ion-input formControlName="username" placeholder="Nombre de usuario" type="text"></ion-input>
+        </ion-item>
+        <ion-note *ngIf="signupForm.controls['username'].hasError('required') && signupForm.controls['username'].touched" color="danger">
+          El nombre de usuario es requerido.
+        </ion-note>
+  
+        <!-- Correo electrónico -->
+        <ion-item>
+          <ion-input formControlName="email" placeholder="Correo electrónico" type="email"></ion-input>
+        </ion-item>
+        <ion-note *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].touched" color="danger">
+          El correo electrónico es requerido.
+        </ion-note>
+        <ion-note *ngIf="signupForm.controls['email'].hasError('email') && signupForm.controls['email'].touched" color="danger">
+          El correo electrónico no es válido.
+        </ion-note>
+  
+        <!-- Teléfono -->
+        <ion-item>
+          <ion-input formControlName="phone" placeholder="Teléfono" type="tel"></ion-input>
+        </ion-item>
+        <ion-note *ngIf="signupForm.controls['phone'].hasError('required') && signupForm.controls['phone'].touched" color="danger">
+          El teléfono es requerido.
+        </ion-note>
+  
+        <!-- Contraseña -->
+        <ion-item>
+          <ion-input formControlName="password" placeholder="Contraseña" type="password"></ion-input>
+        </ion-item>
+        <ion-note *ngIf="signupForm.controls['password'].hasError('required') && signupForm.controls['password'].touched" color="danger">
+          La contraseña es requerida.
+        </ion-note>
+        <ion-note *ngIf="signupForm.controls['password'].hasError('passwordInvalid') && signupForm.controls['password'].touched" color="danger">
+          La contraseña debe contener al menos 4 números, 3 caracteres especiales y 1 mayúscula.
+        </ion-note>
+  
+        <!-- Botones -->
+        <div class="sing-btn-wrap">
+          <ion-button type="submit"  [routerLink]="['/loginscreen']" [disabled]="signupForm.invalid" shape="round" fill="solid">Registrarse</ion-button>
+          <ion-button [routerLink]="['/login']" shape="round">Volver</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </form>
+  
+
+</ion-content>

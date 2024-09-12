@@ -10,27 +10,18 @@
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>bienvenido</ion-title>
+      <ion-title>Perfil</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <div class="menubtn">
-      <ion-button [routerLink]="['/materias']" >Materias</ion-button>
-      <ion-button [routerLink]="['/foro']" >Foros</ion-button>
-      <ion-button [routerLink]="['/perfil']" >Perfil</ion-button>
-      <ion-button [routerLink]="['/loginscreen']" >cerrar cesion</ion-button>
-    </div>
+    <ion-list>
+      <ion-item routerLink="/home">Home</ion-item>
+      <ion-item routerLink="/materias">Materias</ion-item>
+      <ion-item routerLink="/foro">Foro</ion-item>
+      <ion-item routerLink="/loginscreen">Cerrar Sesión</ion-item>
+    </ion-list>
   </ion-content>
 </ion-menu>
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-</div>
 
 <ion-content id="main-content">
   <ion-grid>

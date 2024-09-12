@@ -1,0 +1,26 @@
+ion-content{
+  --ion-background-color:#c1c4ea;
+}
+
+
+.menubtn {
+  display: flex;
+  flex-direction: column;  /* Alinea los elementos en columna (verticalmente) */
+  align-items: flex-start; /* Alinea los botones al inicio del contenedor */
+  gap: 10px; /* Espacio entre los botones */
+}
+
+
+ion-button {
+  --background: transparent; /* Fondo transparente */
+  --border-width: 1px;       /* Grosor del borde */
+  --border-color: black;     /* Color del borde */
+  --color: black;            /* Color del texto */
+  --border-radius: 5px;      /* Redondeo de las esquinas (opcional) */
+  width: 100%;               /* Ancho completo para cada botón */
+  text-align: left;          /* Alineación del texto a la izquierda */
+}  
+
+ion-toolbar{
+--ion-background-color: #c1c4ea;
+}  

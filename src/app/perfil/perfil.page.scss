@@ -2,6 +2,15 @@ ion-content{
     --ion-background-color:#c1c4ea;
 }
 
+
+.menubtn {
+    display: flex;
+    flex-direction: column;  /* Alinea los elementos en columna (verticalmente) */
+    align-items: flex-start; /* Alinea los botones al inicio del contenedor */
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+
   ion-button {
     --background: transparent; /* Fondo transparente */
     --border-width: 1px;       /* Grosor del borde */

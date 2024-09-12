@@ -1,0 +1,65 @@
+ion-toolbar{
+    --ion-background-color:transparent;
+    opacity: 0;
+}
+
+ion-content{
+    --ion-background-color:#c1c4ea;
+}
+
+ion-card{
+    box-shadow: none;
+}
+
+.wrapform{
+    margin-top: 30px;
+
+}
+
+ion-itme{
+    ion-input{
+        color: white;
+    }
+}
+
+.password_forgot{
+    text-align: right;
+    
+}
+
+.sing-btn-wrap{
+    text-align: center;
+    padding-top: 30px;
+    .sing-btn{
+        --ion-primary-color: rgba(56, 56, 57, 0.667);
+        color: white;
+    }
+}
+
+.ion-card-footer{
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    span{
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    }
+ button{
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 3px;
+ }
+
+ button:hover{
+    color: gray;
+ }
+}
+
+ion-card-title{
+    text-align: center;
+}
