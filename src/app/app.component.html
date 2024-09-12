@@ -1,3 +1,26 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu  menuId="main_menu" contentId="main" >
+    <ion-content>
+      <div class="menu-header-bg" ></div>
+      <div class="header-content">
+        <img src="../assets/img/pngegg.png" alt="">
+        <ion-label>
+          <h2>bienvenido</h2>
+        </ion-label>
+      </div>
+      <div class="action-button">
+        <ion-button [routerLink]="['/loginscreen']">
+          <ion-icon  slot="start" name="log-out"></ion-icon> cerrar sesion
+        </ion-button>
+      </div>
+      <div>
+        <ion-list>
+            <ion-button [routerLink]="['/home']" >Home</ion-button>
+            <ion-button [routerLink]="['/materias']" >materias</ion-button>
+            <ion-button [routerLink]="['/foro']" >Foros</ion-button>
+        </ion-list>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

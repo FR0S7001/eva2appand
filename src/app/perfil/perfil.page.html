@@ -1,70 +1,22 @@
 <ion-header [translucent]="true">
-  <ion-toolbar >
+  <ion-toolbar>
+    <ion-title>
+      blank
+    </ion-title>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button menu="main_menu" ></ion-menu-button>
     </ion-buttons>
-    <ion-title style="text-align: center;">Foro Estudio</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-menu contentId="main-content">
-  <ion-header>
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense" >
     <ion-toolbar>
-      <ion-title>Perfil</ion-title>
+      <ion-title size="large" >Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item routerLink="/home">Home</ion-item>
-      <ion-item routerLink="/materias">Materias</ion-item>
-      <ion-item routerLink="/foro">Foro</ion-item>
-      <ion-item routerLink="/loginscreen">Cerrar Sesión</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
 
-<ion-content id="main-content">
-  <ion-grid>
-    <ion-row>
-      <ion-col size="12" size-md="6">
-        <ion-card>
-          <img src="assets/apple-pencil.jpg" alt="Apple Pencil">
-          <ion-card-header>
-            <ion-card-title>¿Cómo sacarle el máximo provecho a tu iPhone con un Apple Pencil?</ion-card-title>
-            <ion-card-subtitle>Por Comunidad Universitarios, en tecnología</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col size="12" size-md="6">
-        <ion-card>
-          <img src="assets/educacion-moderna.jpg" alt="Educación Moderna">
-          <ion-card-header>
-            <ion-card-title>El rol de los teléfonos móviles en la educación moderna</ion-card-title>
-            <ion-card-subtitle>Por Comunidad Universitarios, en Blogs</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+  <div id="container">
 
-    <ion-row>
-      <ion-col size="12" size-md="6">
-        <ion-card>
-          <img src="assets/lavanderia.jpg" alt="Lavandería">
-          <ion-card-header>
-            <ion-card-title>Ideas para organizar tu área de lavandería y maximizar el espacio</ion-card-title>
-            <ion-card-subtitle>Por Comunidad Universitarios, en tendencias-blogs</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col size="12" size-md="6">
-        <ion-card>
-          <img src="assets/cafe.jpg" alt="Café">
-          <ion-card-header>
-            <ion-card-title>Explorando los secretos cautivadores del café: mito y verdad</ion-card-title>
-            <ion-card-subtitle>Por Comunidad Universitarios, en tendencias-blogs</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  </div>
 </ion-content>

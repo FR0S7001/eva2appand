@@ -4,39 +4,17 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title style="text-align: center;">Foro Estudio</ion-title>
+    <div class="subtitle">Home </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-menu contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>bienvenido</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <div class="menubtn">
-      <ion-button [routerLink]="['/materias']" >Materias</ion-button>
-      <ion-button [routerLink]="['/foro']" >Foros</ion-button>
-      <ion-button [routerLink]="['/perfil']" >Perfil</ion-button>
-      <ion-button [routerLink]="['/loginscreen']" >cerrar cesion</ion-button>
-    </div>
-  </ion-content>
-</ion-menu>
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-</div>
+
 
 <ion-content id="main-content">
   <ion-grid>
     <ion-row>
       <ion-col size="12" size-md="6">
-        <ion-card>
+        <ion-card  (click)="animateCard()" [@cardAnimation]="animationState">
           <img src="assets/apple-pencil.jpg" alt="Apple Pencil">
           <ion-card-header>
             <ion-card-title>¿Cómo sacarle el máximo provecho a tu iPhone con un Apple Pencil?</ion-card-title>
@@ -45,7 +23,7 @@
         </ion-card>
       </ion-col>
       <ion-col size="12" size-md="6">
-        <ion-card>
+        <ion-card  (click)="animateCard()" [@cardAnimation]="animationState">
           <img src="assets/educacion-moderna.jpg" alt="Educación Moderna">
           <ion-card-header>
             <ion-card-title>El rol de los teléfonos móviles en la educación moderna</ion-card-title>
@@ -57,7 +35,7 @@
 
     <ion-row>
       <ion-col size="12" size-md="6">
-        <ion-card>
+        <ion-card  (click)="animateCard()" [@cardAnimation]="animationState">
           <img src="assets/lavanderia.jpg" alt="Lavandería">
           <ion-card-header>
             <ion-card-title>Ideas para organizar tu área de lavandería y maximizar el espacio</ion-card-title>
@@ -66,7 +44,7 @@
         </ion-card>
       </ion-col>
       <ion-col size="12" size-md="6">
-        <ion-card>
+        <ion-card  (click)="animateCard()" [@cardAnimation]="animationState">
           <img src="assets/cafe.jpg" alt="Café">
           <ion-card-header>
             <ion-card-title>Explorando los secretos cautivadores del café: mito y verdad</ion-card-title>
@@ -77,3 +55,32 @@
     </ion-row>
   </ion-grid>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+  <ion-content class="ion-padding">
+    <ion-button expand="block" (click)="setOpen(true)">Open</ion-button>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Modal</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+            dicta.
+          </p>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-content>
+</ion-toolbar>
+</ion-footer>
+
+
+
