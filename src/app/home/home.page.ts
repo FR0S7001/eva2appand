@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 
