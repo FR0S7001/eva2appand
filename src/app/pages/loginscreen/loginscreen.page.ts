@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-loginscreen',
@@ -7,19 +7,11 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./loginscreen.page.scss'],
 })
 export class LoginscreenPage  {
-  username: string ='';
 
-  constructor(private navCtrl: NavController) {}
+
+  constructor() {}
   
-  login(){
-    if (this.username){
-      localStorage.setItem('username', this.username)
-
-      this.navCtrl.navigateRoot('/home');
-    } else {
-      alert('por favor ingrese su nombre de usuario')
-    }
-  }
+  
 
   
 
