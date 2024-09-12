@@ -58,6 +58,9 @@
         <ion-note *ngIf="signupForm.controls['password'].hasError('passwordInvalid') && signupForm.controls['password'].touched" color="danger">
           La contraseña debe contener al menos 4 números, 3 caracteres especiales y 1 mayúscula.
         </ion-note>
+        <ion-item>
+          <ion-input formControlName="password" placeholder="confirmar Contraseña" type="password"></ion-input>
+        </ion-item>
   
         <!-- Botones -->
         <div class="sing-btn-wrap">
