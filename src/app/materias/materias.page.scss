@@ -22,5 +22,12 @@ ion-button {
 }  
 
 ion-toolbar{
---ion-background-color: #c1c4ea;
-}  
+  --ion-background-color: rgba(98, 114, 255, 0.5);
+} 
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #0d0c0c;
+  margin-top: 30px;
+}

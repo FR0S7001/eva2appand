@@ -1,15 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-foro',
   templateUrl: './foro.page.html',
   styleUrls: ['./foro.page.scss'],
 })
-export class ForoPage implements OnInit {
+export class ForoPage  {
+  isModalOpen = false;
+  newTopic = {
+    title: '',
+    description: ''
+  };
 
-  constructor() { }
+  constructor(private modalController: ModalController) {}
 
-  ngOnInit() {
+  openModal() {
+    this.isModalOpen = true;
   }
 
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+  createTopic() {
+    // Lógica para crear el tema
+    console.log('Nuevo Tema:', this.newTopic);
+    this.closeModal();
+  }
 }
