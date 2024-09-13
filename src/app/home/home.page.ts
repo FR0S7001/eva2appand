@@ -29,7 +29,6 @@ export class HomePage {
 
 
 
-
   
   animationState = 'inactive';
 
