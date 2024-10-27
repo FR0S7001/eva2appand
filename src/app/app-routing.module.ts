@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
@@ -13,33 +13,34 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'materias',
-    loadChildren: () => import('./materias/materias.module').then( m => m.MateriasPageModule)
+    loadChildren: () => import('./materias/materias.module').then(m => m.MateriasPageModule)
   },
   {
     path: 'foro',
-    loadChildren: () => import('./foro/foro.module').then( m => m.ForoPageModule)
+    loadChildren: () => import('./foro/foro.module').then(m => m.ForoPageModule)
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule)
   },
- 
   {
     path: 'loginscreen',
-    loadChildren: () => import('./pages/loginscreen/loginscreen.module').then( m => m.LoginscreenPageModule)
+    loadChildren: () => import('./pages/loginscreen/loginscreen.module').then(m => m.LoginscreenPageModule)
   },
   {
     path: 'signup',
-    loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
+    loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignupPageModule)
   },
   {
     path: 'restarpass',
-    loadChildren: () => import('./pages/restarpass/restarpass.module').then( m => m.RestarpassPageModule)
+    loadChildren: () => import('./pages/restarpass/restarpass.module').then(m => m.RestarpassPageModule)
   },
+ 
+  // Puedes agregar más rutas aquí según sea necesario
 ];
 
 @NgModule({
