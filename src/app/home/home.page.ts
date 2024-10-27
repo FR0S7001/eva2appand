@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Router } from '@angular/router';
 
@@ -25,11 +25,19 @@ import { Router } from '@angular/router';
   ]
 })
 
-export class HomePage {
+export class HomePage implements OnInit {
+  username: string = '';
 
+  constructor(private router: Router) {
+    const navigation = this.router.getCurrentNavigation();
+    if (navigation?.extras.state) {
+      this.username = navigation.extras.state['username']; // Retrieve username
+    }
+  }
 
+  ngOnInit(): void {
+  }
 
-  
   animationState = 'inactive';
 
   animateCard() {
