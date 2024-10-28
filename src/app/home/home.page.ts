@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -24,26 +22,24 @@ import { Router } from '@angular/router';
     ])
   ]
 })
-
 export class HomePage implements OnInit {
   username: string = '';
 
   constructor(private router: Router) {
     const navigation = this.router.getCurrentNavigation();
     if (navigation?.extras.state) {
-      this.username = navigation.extras.state['username']; // Retrieve username
+      this.username = navigation.extras.state['username'];
+      localStorage.setItem('username', this.username);
+    } else {
+      this.username = localStorage.getItem('username') || '';
     }
-  }
-
-  ngOnInit(): void {
   }
 
   animationState = 'inactive';
 
   animateCard() {
-    this.animationState = this.animationState === 'inactive' ? 'active' : 'inactive';}
-
-
+    this.animationState = this.animationState === 'inactive' ? 'active' : 'inactive';
+  }
 
   isModalOpen = false;
 
@@ -51,4 +47,6 @@ export class HomePage implements OnInit {
     this.isModalOpen = isOpen;
   }
 
+  ngOnInit(): void {
+  }
 }

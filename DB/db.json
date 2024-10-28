@@ -33,19 +33,14 @@
       "description": "Descripción del tema 1"
     },
     {
-      "id": "2",
-      "title": "Título del tema 2",
-      "description": "Descripción del tema 2"
-    },
-    {
-      "id": "0",
-      "title": "diiii",
-      "description": "didjdidi"
-    },
-    {
       "id": "0",
       "title": "ggg",
       "description": "ddddd"
+    },
+    {
+      "id": 0,
+      "title": "dddd",
+      "description": "gfgggeee"
     }
   ]
 }
